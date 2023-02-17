@@ -2018,6 +2018,10 @@ textarea.form-control-lg {
   height: 1.5em;
   border-radius: 0.25rem;
 }
+.banner .intro .logo {
+  width: 400px;
+  height: 400px;
+}
 .form-select {
   display: block;
   width: 100%;
