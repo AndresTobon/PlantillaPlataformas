@@ -5,6 +5,17 @@
 window.onscroll = function () {
   scrollFunction();
   scrollFunctionBTT(); // back to top button
+  frm_login = document.getElementById("frm_login");
+  btn_enviar = document.getElementById("btn_enviar");
+  btn_enviar_registrar = document.getElementById("btn_enviar_registrar");
+  frm_registro = document.getElementById("frm_registro");
+  home = document.getElementById("home");
+  btn_ir_a_registro = document.getElementById("btn_ir_a_registro");
+  btn_ir_a_registro.addEventListener("click", irARegistro);
+  //btn_enviar.addEventListener("click",validar);
+  //btn_enviar_registrar.addEventListener("click",registrar);
+  configurar_login();
+  configurar_registro();
 };
 
 window.onload = function () {
@@ -143,19 +154,6 @@ let correo;
 let img_perfil =
   "https://icons.iconarchive.com/icons/jonathan-rey/star-wars-vehicles/48/Death-Star-2nd-icon.png";
 
-window.onload = function () {
-  frm_login = document.getElementById("frm_login");
-  btn_enviar = document.getElementById("btn_enviar");
-  btn_enviar_registrar = document.getElementById("btn_enviar_registrar");
-  frm_registro = document.getElementById("frm_registro");
-  home = document.getElementById("home");
-  btn_ir_a_registro = document.getElementById("btn_ir_a_registro");
-  btn_ir_a_registro.addEventListener("click", irARegistro);
-  //btn_enviar.addEventListener("click",validar);
-  //btn_enviar_registrar.addEventListener("click",registrar);
-  configurar_login();
-  configurar_registro();
-};
 function procesardatos() {
   fetch("scripts/scripts.php", {
     method: "post",
@@ -243,16 +241,10 @@ function cerrarSesion(event) {
 
 function registrar() {
   let nombre = document.getElementById("nombre");
-  let apellido = document.getElementById("apellido");
-  let celular = document.getElementById("celular");
-  let direccion = document.getElementById("direccion");
   let correo = document.getElementById("correo1");
   let clave = document.getElementById("clave1");
   let usuario = {
     nombre: nombre.value,
-    apellido: apellido.value,
-    celular: celular.value,
-    direccion: direccion.value,
     correo: correo.value,
     clave: clave.value,
   };

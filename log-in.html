@@ -72,7 +72,7 @@
                         </li>
                     </ul>
                     <span class="nav-item">
-                        <a class="btn-outline-sm" href="log-in.html">Log in</a>
+                        <a class="btn-outline-sm" href="log-in.html">Ingresar</a>
                     </span>
                 </div> <!-- end of navbar-collapse -->
             </div> <!-- end of container -->
@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-10 offset-xl-1">
-                        <h1 class="text-center">Log In</h1>
+                        <h1 class="text-center">Ingresa a tu usuario</h1>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
@@ -99,23 +99,29 @@
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3">
                         <div class="text-box mt-5 mb-5">
-                            <p class="mb-4">You don't have a password? Then please <a class="blue" href="sign-up.html">Sign Up</a></p>
+                            <p class="mb-4">No tienes una cuenta? Porfavor <a class="blue" href="sign-up.html">Registrate</a></p>
 
                             <!-- Log In Form -->
                             <form>
                                 <div class="mb-4 form-floating">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"required>
+                                    <label for="floatingInput">Correo</label>
+                                    <div class ="invalid-feedback">
+                                        Ingresa un correo valido
+                                    </div>
                                 </div>
                                 <div class="mb-4 form-floating">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"required>
+                                    <label for="floatingPassword">Contraseña</label>
+                                    <div class ="invalid-feedback">
+                                        Verifica tu contraseña
+                                    </div>
                                 </div>
                                 <div class="mb-4 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">I agree with the site's stated <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms & Conditions</a></label>
+                                    <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo con la <a href="privacy.html">Politica de privacidad</a> y con los <a href="terms.html">Terminos y condiciones</a></label>
                                 </div>
-                                <button type="submit" class="form-control-submit-button">Log in</button>
+                                <button type="submit" id="btn_enviar" class="form-control-submit-button" value="Enviar">Log in</button>
                             </form>
                             <!-- end of log in form -->
 
