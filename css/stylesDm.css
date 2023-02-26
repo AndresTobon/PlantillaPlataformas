@@ -774,8 +774,9 @@ a:hover {
 /*     Invitation     */
 /**********************/
 .basic-3 {
-	padding-top: 9rem;
-	padding-bottom: 9rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	height: 20rem;
 	background-color: #272556;
 	text-align: center;
 }
