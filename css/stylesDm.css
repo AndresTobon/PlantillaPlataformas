@@ -45,6 +45,18 @@ p {
 	font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* se cambia número de columnas según sea necesario */
+	grid-gap: 10px; /* se ajusta el espacio entre imagenes según se necesite */
+	max-width: 100%; /* imagenes no sobrepasan el tamaño del grid */
+	height: auto; /* mantener el ratio aspect */
+	max-height: 300px; /* altura máxima de imagenes */
+	  
+	  
+  }
+  
+
 h1 {
 	color: #272556;
 	font-weight: 600;
