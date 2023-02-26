@@ -280,14 +280,7 @@ function compararClave() {
     frm_login.reset();
     frm_login.classList.add("ocultar");
     home.classList.remove("ocultar");
-    html = `
-      <nav>
-        <img src="${img_perfil}" />
-        <a href="javascript:void(0);" id="btn_cerrar_sesion" onclick="cerrarSesion();">Cerrar sesion</a>
-      </nav>
-      <h2>Pagina principal </h2> 
-      <br>Hola ${usuario.nombre}
-     `;
+    html = "index.html";
     home.innerHTML = html;
   } else {
     alert("Datos incorrectos");
