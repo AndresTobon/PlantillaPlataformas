@@ -23,7 +23,6 @@ window.onload = function () {
 };
 
 function scrollFunction() {
-<<<<<<< HEAD
   if (document.documentElement.scrollTop > 30) {
     document.getElementById("navbarExample").classList.add("top-nav-collapse");
   } else if (document.documentElement.scrollTop < 30) {
@@ -31,13 +30,14 @@ function scrollFunction() {
       .getElementById("navbarExample")
       .classList.remove("top-nav-collapse");
   }
-=======
-	if (document.documentElement.scrollTop > 30) {
-		document.getElementById("navbarExample").classList.add("top-nav-collapse");
-	} else if (document.documentElement.scrollTop < 30) {
-		document.getElementById("navbarExample").classList.remove("top-nav-collapse");
-	}
->>>>>>> 5dc8459e4433fda278760b35832635be9b2eb64e
+
+  if (document.documentElement.scrollTop > 30) {
+    document.getElementById("navbarExample").classList.add("top-nav-collapse");
+  } else if (document.documentElement.scrollTop < 30) {
+    document
+      .getElementById("navbarExample")
+      .classList.remove("top-nav-collapse");
+  }
 }
 
 // Navbar on mobile
@@ -50,11 +50,9 @@ for (let i = 0; i < elements.length; i++) {
 }
 
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
-<<<<<<< HEAD
   document.querySelector(".offcanvas-collapse").classList.toggle("open");
-=======
-	document.querySelector(".offcanvas-collapse").classList.toggle("open");
->>>>>>> 5dc8459e4433fda278760b35832635be9b2eb64e
+
+  document.querySelector(".offcanvas-collapse").classList.toggle("open");
 });
 
 // Hover on desktop
@@ -62,7 +60,6 @@ function toggleDropdown(e) {
   const _d = e.target.closest(".dropdown");
   let _m = document.querySelector(".dropdown-menu", _d);
 
-<<<<<<< HEAD
   setTimeout(
     function () {
       const shouldOpen = _d.matches(":hover");
@@ -73,46 +70,58 @@ function toggleDropdown(e) {
     },
     e.type === "mouseleave" ? 300 : 0
   );
-=======
-	setTimeout(
-		function () {
-			const shouldOpen = _d.matches(":hover");
-			_m.classList.toggle("show", shouldOpen);
-			_d.classList.toggle("show", shouldOpen);
 
-			_d.setAttribute("aria-expanded", shouldOpen);
-		},
-		e.type === "mouseleave" ? 300 : 0
-	);
->>>>>>> 5dc8459e4433fda278760b35832635be9b2eb64e
+  setTimeout(
+    function () {
+      const shouldOpen = _d.matches(":hover");
+      _m.classList.toggle("show", shouldOpen);
+      _d.classList.toggle("show", shouldOpen);
+
+      _d.setAttribute("aria-expanded", shouldOpen);
+    },
+    e.type === "mouseleave" ? 300 : 0
+  );
 }
 (function (d, s, id) {
-	var js, el = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) { return; }
-	js = d.createElement(s); js.id = id;
-	js.src = 'https://widget.rasayel.io/whatsapp/rasayel-waba-widget.iife.js';
-	el.parentNode.insertBefore(js, el);
-	js.onload = function () {
-		var w = window.RasayelWabaWidget;
-		w.create({ "title": "TuSuperCarro.com", "subtitle": "", "message": "Hola, escribenos, con gusto te atenderemos", "avatar": "", "phone": "+201090740035", "cta": "Pasar al chat" })
-	}
-}(document, 'script', 'rasayel-js'));
+  var js,
+    el = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {
+    return;
+  }
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://widget.rasayel.io/whatsapp/rasayel-waba-widget.iife.js";
+  el.parentNode.insertBefore(js, el);
+  js.onload = function () {
+    var w = window.RasayelWabaWidget;
+    w.create({
+      title: "TuSuperCarro.com",
+      subtitle: "",
+      message: "Hola, escribenos, con gusto te atenderemos",
+      avatar: "",
+      phone: "+201090740035",
+      cta: "Pasar al chat",
+    });
+  };
+})(document, "script", "rasayel-js");
 
 // On hover
 const dropdownCheck = document.querySelector(".dropdown");
 
 if (dropdownCheck !== null) {
-<<<<<<< HEAD
   document
     .querySelector(".dropdown")
     .addEventListener("mouseleave", toggleDropdown);
   document
     .querySelector(".dropdown")
     .addEventListener("mouseover", toggleDropdown);
-=======
-	document.querySelector(".dropdown").addEventListener("mouseleave", toggleDropdown);
-	document.querySelector(".dropdown").addEventListener("mouseover", toggleDropdown);
->>>>>>> 5dc8459e4433fda278760b35832635be9b2eb64e
+
+  document
+    .querySelector(".dropdown")
+    .addEventListener("mouseleave", toggleDropdown);
+  document
+    .querySelector(".dropdown")
+    .addEventListener("mouseover", toggleDropdown);
 
   // On click
   document.querySelector(".dropdown").addEventListener("click", (e) => {
@@ -129,7 +138,6 @@ if (dropdownCheck !== null) {
 }
 
 /* Rotating Text - Word Cycle */
-<<<<<<< HEAD
 var checkReplace = document.querySelector(".replace-me");
 if (checkReplace !== null) {
   var replace = new ReplaceMe(document.querySelector(".replace-me"), {
@@ -145,24 +153,6 @@ if (checkReplace !== null) {
     onComplete: false, // Function
   });
 }
-=======
-var checkReplace = document.querySelector('.replace-me');
-if (checkReplace !== null) {
-	var replace = new ReplaceMe(document.querySelector('.replace-me'), {
-		animation: 'animated fadeIn',                       // Animation class or classes
-		speed: 2000,                                        // Delay between each phrase in miliseconds
-		separator: ',',                                     // Phrases separator
-		hoverStop: false,                                   // Stop rotator on phrase hover
-		clickChange: false,                                 // Change phrase on click
-		loopCount: 'infinite',                              // Loop Count - 'infinite' or number
-		autoRun: true,                                      // Run rotator automatically
-		onInit: false,                                      // Function
-		onChange: false,                                    // Function
-		onComplete: false                                   // Function
-	});
-}
-
->>>>>>> 5dc8459e4433fda278760b35832635be9b2eb64e
 
 /* Card Slider - Swiper */
 var cardSlider = new Swiper(".card-slider", {
