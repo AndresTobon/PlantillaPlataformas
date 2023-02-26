@@ -17,7 +17,21 @@ window.onload = function () {
   configurar_login();
   configurar_registro();
 };
-
+function procesardatos() {
+  fetch("scripts/scripts.php", {
+    method: "post",
+    body: new FormData(frm),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      console.log(json);
+    })
+    .catch(function (err) {
+      // Error :(
+    });
+}
 function configurar_login() {
   frm_login.addEventListener(
     "submit",
@@ -68,7 +82,16 @@ function compararClave() {
     frm_login.classList.remove("was-validated");
     frm_login.reset();
     frm_login.classList.add("ocultar");
-    window.location.href = "index2.html";
+    home.classList.remove("ocultar");
+    html = `
+      <nav>
+        <img src="${img_perfil}" />
+        <a href="javascript:void(0);" id="btn_cerrar_sesion" onclick="cerrarSesion();">Cerrar sesion</a>
+      </nav>
+      <h2>Pagina principal </h2> 
+      <br>Hola ${usuario.nombre}
+     `;
+    home.innerHTML = html;
   } else {
     alert("Datos incorrectos");
   }
