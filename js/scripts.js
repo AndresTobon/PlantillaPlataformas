@@ -14,7 +14,7 @@ window.onload = function () {
 function scrollFunction() {
 	if (document.documentElement.scrollTop > 30) {
 		document.getElementById("navbarExample").classList.add("top-nav-collapse");
-	} else if ( document.documentElement.scrollTop < 30 ) {
+	} else if (document.documentElement.scrollTop < 30) {
 		document.getElementById("navbarExample").classList.remove("top-nav-collapse");
 	}
 }
@@ -29,7 +29,7 @@ for (let i = 0; i < elements.length; i++) {
 }
 
 document.querySelector(".navbar-toggler").addEventListener("click", () => {
-  	document.querySelector(".offcanvas-collapse").classList.toggle("open");
+	document.querySelector(".offcanvas-collapse").classList.toggle("open");
 });
 
 // Hover on desktop
@@ -39,20 +39,31 @@ function toggleDropdown(e) {
 
 	setTimeout(
 		function () {
-		const shouldOpen = _d.matches(":hover");
-		_m.classList.toggle("show", shouldOpen);
-		_d.classList.toggle("show", shouldOpen);
+			const shouldOpen = _d.matches(":hover");
+			_m.classList.toggle("show", shouldOpen);
+			_d.classList.toggle("show", shouldOpen);
 
-		_d.setAttribute("aria-expanded", shouldOpen);
+			_d.setAttribute("aria-expanded", shouldOpen);
 		},
 		e.type === "mouseleave" ? 300 : 0
 	);
 }
+(function (d, s, id) {
+	var js, el = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) { return; }
+	js = d.createElement(s); js.id = id;
+	js.src = 'https://widget.rasayel.io/whatsapp/rasayel-waba-widget.iife.js';
+	el.parentNode.insertBefore(js, el);
+	js.onload = function () {
+		var w = window.RasayelWabaWidget;
+		w.create({ "title": "TuSuperCarro.com", "subtitle": "", "message": "Hola, escribenos, con gusto te atenderemos", "avatar": "", "phone": "+201090740035", "cta": "Pasar al chat" })
+	}
+}(document, 'script', 'rasayel-js'));
 
 // On hover
 const dropdownCheck = document.querySelector('.dropdown');
 
-if (dropdownCheck !== null) { 
+if (dropdownCheck !== null) {
 	document.querySelector(".dropdown").addEventListener("mouseleave", toggleDropdown);
 	document.querySelector(".dropdown").addEventListener("mouseover", toggleDropdown);
 
@@ -73,7 +84,7 @@ if (dropdownCheck !== null) {
 
 /* Rotating Text - Word Cycle */
 var checkReplace = document.querySelector('.replace-me');
-if (checkReplace !== null) { 
+if (checkReplace !== null) {
 	var replace = new ReplaceMe(document.querySelector('.replace-me'), {
 		animation: 'animated fadeIn',                       // Animation class or classes
 		speed: 2000,                                        // Delay between each phrase in miliseconds
@@ -87,7 +98,7 @@ if (checkReplace !== null) {
 		onComplete: false                                   // Function
 	});
 }
-  
+
 
 /* Card Slider - Swiper */
 var cardSlider = new Swiper('.card-slider', {
