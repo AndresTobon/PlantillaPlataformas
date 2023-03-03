@@ -47,13 +47,14 @@ p {
 
 .image-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* se cambia número de columnas según sea necesario */
-	grid-gap: 10px; /* se ajusta el espacio entre imagenes según se necesite */
-	max-width: 100%; /* imagenes no sobrepasan el tamaño del grid */
-	height: auto; /* mantener el ratio aspect */
-	max-height: 300px; /* altura máxima de imagenes */
-	  
-	  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.image-grid img {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
   }
   
 
